@@ -771,13 +771,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => getenv('database'),
-  'username' => getenv('username'),
-  'password' => getenv('password'),
+  'database' => 'drupal9',
+  'username' => 'drupal9',
+  'password' => 'drupal9',
   'prefix' => '',
-  'host' => getenv('host'),
-  'port' => getenv('port'),
-  'namespace' => getenv('namespace'),
-  'driver' => getenv('driver'),
+  'host' => 'database',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = 'config/sync';
