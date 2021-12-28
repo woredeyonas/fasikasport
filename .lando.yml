@@ -1,4 +1,4 @@
 name: fasikasport
-recipe: drupal8
+recipe: drupal9
 config:
   webroot: .
