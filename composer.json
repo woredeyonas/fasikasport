@@ -22,6 +22,7 @@
         "drupal/core-recommended": "^9",
         "drupal/core-vendor-hardening": "^9",
         "drupal/paragraphs": "^1.12",
+        "drupal/tailwindcss": "^4.0@RC",
         "drush/drush": "^10.6"
     },
     "conflict": {

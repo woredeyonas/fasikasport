@@ -1,5 +1,7 @@
 vendor/
 core/
 modules/
+sites/default/
+node_modules/
 
 
