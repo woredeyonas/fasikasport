@@ -3,3 +3,5 @@ global_styles:
   css:
     theme:
       css/styles.css: {}
+  js:
+    https://kit.fontawesome.com/03e91bc9c6.js: { type: external}    
