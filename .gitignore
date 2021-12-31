@@ -1,7 +1,8 @@
 vendor/
 core/
-modules/
+modules/contrib
 sites/default/
 node_modules/
+themes/contrib/
 
 

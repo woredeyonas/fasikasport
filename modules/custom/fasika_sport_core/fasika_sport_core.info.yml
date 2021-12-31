@@ -1,0 +1,7 @@
+name: Fasika Sport Core 
+type: module
+description: Core Module for Fasika Sport
+core_version_requirement: ^8 || ^9
+package: Custom 
+dependencies:
+  - block
