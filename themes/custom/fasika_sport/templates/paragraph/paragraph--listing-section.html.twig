@@ -49,56 +49,39 @@
   ]
 %}
 {% set card_info_section_title = content.field_listing_section_title['#items'].getValue().0.value %}
-
+  
 {% block paragraph %}
-  <section{{ attributes.addClass(classes) }}>
-    {% block content %}
-      <div class="container px-5 py-24 mx-auto">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 text-center"> {{ card_info_section_title|t }} </h1>
-        <div class="-my-8 divide-y-2 divide-gray-100">
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">{{ card_info_section_title|t }}</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+    </div> 
+      <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+        <img alt="feature" class="object-cover object-center h-full w-full" src="https://dummyimage.com/460x500">
+      </div>
+      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
           {% for key, value in content.field_listing_component['#items'].getValue %}
             {% set listing_title = content.field_listing_component[key]['#paragraph'].field_hero_title.getValue().0.value %}
-            {% set listing_content = content.field_listing_component[key]['#paragraph'].field_info_card_description.getValue().0.value %}
-            <div class="py-8 flex flex-wrap md:flex-nowrap">
-              {% if key is odd %}
-                <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-                  <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-                    <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                    <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              {% elseif key is even or key == '0' %}
-                <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-                  <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-                    <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                    <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>                  
-                  <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                  </div>
-                </div>
-              {% endif %}
+            {% set listing_content = content.field_listing_component[key]['#paragraph'].field_info_card_description.getValue().0.value %}      
+            <div class="flex flex-col mb-10 lg:items-start items-center">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ listing_title|t }}</h2>
+                <p class="leading-relaxed text-base">{{ listing_content|t }}</p>
+                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
-          {% endfor %}
-        </div>
-      </div>  
-    {% endblock %}
+          {% endfor %}  
+      </div>
+    </div>
   </section>
-{% endblock paragraph %}
+{% endblock paragraph %}  

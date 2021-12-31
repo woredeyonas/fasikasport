@@ -53,9 +53,18 @@
 {% block paragraph %}
   <section{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div class="container px-5 py-24 mx-auto">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 text-center"> {{ card_info_section_title|t }} </h1>
-        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+      <div class="container px-5 py-20 mx-auto">
+        <div class="flex flex-col">
+          <div class="h-1 bg-black rounded overflow-hidden">
+            <div class="w-40 h-full bg-orange-500"></div>
+          </div>
+          <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-4xl mb-2 sm:mb-0">{{ card_info_section_title|t }}</h1>
+            <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+          </div>
+        </div>
+      </div>  
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6 px-40">
           {% for key, value in content.field_cards['#items'].getValue %}
             {% set info_title = content.field_cards[key]['#paragraph'].field_info_card_title.getValue().0.value %}
             {% set info_content = content.field_cards[key]['#paragraph'].field_info_card_description.getValue().0.value %}

@@ -20,7 +20,7 @@ class CopyrightInfoBlock extends BlockBase {
   public function build() {
     return [
       '#type' => 'markup',
-      '#markup' => '<p>&#169; ' . date("Y") . ' ' . $this->t('Fasika Sport') .'</p>',
+      '#markup' => '&#169; ' . date("Y") . ' ' . $this->t('Fasika Sport'),
     ];
   }
 

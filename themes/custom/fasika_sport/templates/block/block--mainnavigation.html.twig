@@ -1,0 +1,11 @@
+{% set items = content['#items'] %}
+  <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+    <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">{{ label|t }}</h1>
+    <nav class="flex flex-col sm:text-left text-center items-center -mb-1 space-y-2.5">
+      {% for item in items %}
+        <li class="block mb-1">
+          {{ link(item.title, item.url, { 'class':['text-white ', 'hover:text-orange-800', 'leading-4']}) }}
+        </li>
+      {% endfor %}
+    </nav>   
+</div>
