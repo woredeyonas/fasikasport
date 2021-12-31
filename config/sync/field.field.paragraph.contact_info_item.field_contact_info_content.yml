@@ -1,0 +1,19 @@
+uuid: 7f30e313-eff2-4afb-aea1-4ad1937a8352
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_info_content
+    - paragraphs.paragraphs_type.contact_info_item
+id: paragraph.contact_info_item.field_contact_info_content
+field_name: field_contact_info_content
+entity_type: paragraph
+bundle: contact_info_item
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

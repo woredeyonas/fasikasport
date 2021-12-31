@@ -1,0 +1,38 @@
+uuid: b4227b2a-8913-4824-883e-1bf38382a230
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.listing_section.field_listing_component
+    - field.field.paragraph.listing_section.field_listing_section_title
+    - paragraphs.paragraphs_type.listing_section
+  module:
+    - paragraphs
+id: paragraph.listing_section.default
+targetEntityType: paragraph
+bundle: listing_section
+mode: default
+content:
+  field_listing_component:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_listing_section_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

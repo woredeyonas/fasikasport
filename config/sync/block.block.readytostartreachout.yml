@@ -1,0 +1,25 @@
+uuid: d9e1844b-885b-4a7c-b896-fa90bfd7f8e2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e45ab075-5382-4293-a387-0f5cd74304a3'
+  module:
+    - block_content
+  theme:
+    - fasika_sport
+id: readytostartreachout
+theme: fasika_sport
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:e45ab075-5382-4293-a387-0f5cd74304a3'
+settings:
+  id: 'block_content:e45ab075-5382-4293-a387-0f5cd74304a3'
+  label: 'Ready to start? Reach out!'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

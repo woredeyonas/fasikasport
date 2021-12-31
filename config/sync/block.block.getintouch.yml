@@ -1,0 +1,25 @@
+uuid: 0c23e2d5-e811-4f85-8e76-da30e3f9bbcf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_info_block:f94b0fc4-23d9-4692-954d-e8608345995f'
+  module:
+    - block_content
+  theme:
+    - fasika_sport
+id: getintouch
+theme: fasika_sport
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:f94b0fc4-23d9-4692-954d-e8608345995f'
+settings:
+  id: 'block_content:f94b0fc4-23d9-4692-954d-e8608345995f'
+  label: 'Get in touch'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

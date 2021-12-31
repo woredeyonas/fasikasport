@@ -1,0 +1,25 @@
+uuid: 05753f5f-36df-42b3-82c9-dce53d88e253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_links.field_links
+    - paragraphs.paragraphs_type.social_media_links
+  module:
+    - link
+id: paragraph.social_media_links.default
+targetEntityType: paragraph
+bundle: social_media_links
+mode: default
+content:
+  field_links:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

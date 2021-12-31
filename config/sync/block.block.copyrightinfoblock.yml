@@ -1,0 +1,20 @@
+uuid: e7328fad-84a5-42f2-aec7-4087263467df
+langcode: en
+status: true
+dependencies:
+  module:
+    - fasika_sport_core
+  theme:
+    - fasika_sport
+id: copyrightinfoblock
+theme: fasika_sport
+region: copyright
+weight: -7
+provider: null
+plugin: copy_right_info
+settings:
+  id: copy_right_info
+  label: 'Copyright Info block'
+  label_display: '0'
+  provider: fasika_sport_core
+visibility: {  }

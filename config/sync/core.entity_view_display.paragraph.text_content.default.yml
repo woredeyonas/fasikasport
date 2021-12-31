@@ -1,0 +1,45 @@
+uuid: d78d329e-2659-45c0-86ca-48359edd6c49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_content.field_content
+    - field.field.paragraph.text_content.field_link
+    - field.field.paragraph.text_content.field_text_content_title
+    - paragraphs.paragraphs_type.text_content
+  module:
+    - link
+    - text
+id: paragraph.text_content.default
+targetEntityType: paragraph
+bundle: text_content
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text_content_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

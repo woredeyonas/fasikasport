@@ -1,0 +1,25 @@
+uuid: eec89278-5699-4f36-a419-e854b6ba03d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - fasika_sport
+id: mainnavigation
+theme: fasika_sport
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Quick Links'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

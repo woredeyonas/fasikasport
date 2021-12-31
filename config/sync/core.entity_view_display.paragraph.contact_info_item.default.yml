@@ -1,0 +1,30 @@
+uuid: 7668af77-65b0-4418-8dc8-015abed6802a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_info_item.field_contact_info_content
+    - field.field.paragraph.contact_info_item.field_info_card_icon
+    - paragraphs.paragraphs_type.contact_info_item
+id: paragraph.contact_info_item.default
+targetEntityType: paragraph
+bundle: contact_info_item
+mode: default
+content:
+  field_contact_info_content:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_info_card_icon:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

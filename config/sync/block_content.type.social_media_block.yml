@@ -1,0 +1,8 @@
+uuid: e8388007-2061-43cd-9439-cd32368e8543
+langcode: en
+status: true
+dependencies: {  }
+id: social_media_block
+label: 'Social Media Block'
+revision: 0
+description: ''

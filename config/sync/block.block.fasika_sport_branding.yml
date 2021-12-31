@@ -1,0 +1,25 @@
+uuid: 0de96686-854c-4bd6-a265-fb73708a1ff6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fasika_sport
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: fasika_sport_branding
+theme: fasika_sport
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

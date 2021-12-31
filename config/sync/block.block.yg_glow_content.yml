@@ -1,0 +1,22 @@
+uuid: 0910acdb-3777-47db-be39-a547b48f383e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yg_glow
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: yg_glow_content
+theme: yg_glow
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

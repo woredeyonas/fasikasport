@@ -1,0 +1,23 @@
+uuid: b0410170-b67d-4038-b69d-b3e1d14a789e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_website_link
+    - paragraphs.paragraphs_type.listing_component
+  module:
+    - link
+id: paragraph.listing_component.field_website_link
+field_name: field_website_link
+entity_type: paragraph
+bundle: listing_component
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 16
+field_type: link

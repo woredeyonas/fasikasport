@@ -1,0 +1,19 @@
+uuid: 4645cba4-e0f3-47b9-bcb5-6144835fbb8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_sub_title
+    - paragraphs.paragraphs_type.listing_component
+id: paragraph.listing_component.field_hero_sub_title
+field_name: field_hero_sub_title
+entity_type: paragraph
+bundle: listing_component
+label: 'Sub Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

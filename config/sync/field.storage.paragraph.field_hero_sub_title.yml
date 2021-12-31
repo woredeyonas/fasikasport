@@ -1,0 +1,19 @@
+uuid: 44d7d62f-c41c-4813-a9e5-12e5d2278807
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_hero_sub_title
+field_name: field_hero_sub_title
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

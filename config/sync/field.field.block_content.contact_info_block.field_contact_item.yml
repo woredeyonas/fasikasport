@@ -1,0 +1,52 @@
+uuid: e04416ce-3fd5-43cb-a85a-d53fbc745d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_info_block
+    - field.storage.block_content.field_contact_item
+    - paragraphs.paragraphs_type.contact_info_item
+  module:
+    - entity_reference_revisions
+id: block_content.contact_info_block.field_contact_item
+field_name: field_contact_item
+entity_type: block_content
+bundle: contact_info_block
+label: 'Contact Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      contact_info_item: contact_info_item
+    negate: 0
+    target_bundles_drag_drop:
+      contact_info_item:
+        weight: 9
+        enabled: true
+      hero_content:
+        weight: 10
+        enabled: false
+      info_card:
+        weight: 11
+        enabled: false
+      info_cards:
+        weight: 12
+        enabled: false
+      listing_component:
+        weight: 13
+        enabled: false
+      listing_section:
+        weight: 14
+        enabled: false
+      social_media_links:
+        weight: 15
+        enabled: false
+      text_content:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

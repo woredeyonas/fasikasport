@@ -1,0 +1,22 @@
+uuid: 8456b655-f023-4a90-8ef2-a58c866ff1af
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fasika_sport
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: fasika_sport_content
+theme: fasika_sport
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

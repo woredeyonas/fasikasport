@@ -1,0 +1,25 @@
+uuid: a28a6b6b-b081-4b4c-8cd5-7f1551c5cc4b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_media_block:6719dfca-b955-49c6-b7cf-57f42adcc465'
+  module:
+    - block_content
+  theme:
+    - fasika_sport
+id: socialmedialinks
+theme: fasika_sport
+region: copyright
+weight: -6
+provider: null
+plugin: 'block_content:6719dfca-b955-49c6-b7cf-57f42adcc465'
+settings:
+  id: 'block_content:6719dfca-b955-49c6-b7cf-57f42adcc465'
+  label: 'Social Media LInks'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

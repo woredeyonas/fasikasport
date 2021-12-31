@@ -1,0 +1,22 @@
+uuid: 2737e9b1-0868-4188-8eb3-2ede1dcecb34
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - fasika_sport
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: fasika_sport_help
+theme: fasika_sport
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

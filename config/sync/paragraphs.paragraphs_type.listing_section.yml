@@ -1,0 +1,10 @@
+uuid: 62978666-5e83-4e52-99dd-ec4bdb0db642
+langcode: en
+status: true
+dependencies: {  }
+id: listing_section
+label: 'Listing section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

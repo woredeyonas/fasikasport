@@ -1,0 +1,46 @@
+uuid: 65c65bf1-e56c-4b7f-a06c-8bb0149be6e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_listing_component
+    - paragraphs.paragraphs_type.listing_component
+    - paragraphs.paragraphs_type.listing_section
+  module:
+    - entity_reference_revisions
+id: paragraph.listing_section.field_listing_component
+field_name: field_listing_component
+entity_type: paragraph
+bundle: listing_section
+label: 'List Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      listing_component: listing_component
+    negate: 0
+    target_bundles_drag_drop:
+      hero_content:
+        weight: 7
+        enabled: false
+      info_card:
+        weight: 8
+        enabled: false
+      info_cards:
+        weight: 9
+        enabled: false
+      listing_component:
+        weight: 10
+        enabled: true
+      listing_section:
+        weight: 11
+        enabled: false
+      text_content:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

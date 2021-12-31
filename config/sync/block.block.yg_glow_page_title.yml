@@ -1,0 +1,20 @@
+uuid: 4fa5e261-7466-48e5-bf91-a5b82fd325f0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yg_glow
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: yg_glow_page_title
+theme: yg_glow
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

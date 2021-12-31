@@ -1,0 +1,23 @@
+uuid: e2abefe9-4304-4ac5-b56e-1d9c974a4969
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - yg_glow
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: yg_glow_search
+theme: yg_glow
+region: header
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: visible
+  provider: search
+  page_id: node_search
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: b95a2027-69e0-448b-b821-d1aa7e3e7b2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_block
+    - field.storage.block_content.field_hero_paragraph
+    - paragraphs.paragraphs_type.hero_content
+  module:
+    - entity_reference_revisions
+id: block_content.hero_block.field_hero_paragraph
+field_name: field_hero_paragraph
+entity_type: block_content
+bundle: hero_block
+label: 'Hero Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero_content: hero_content
+    negate: 0
+    target_bundles_drag_drop:
+      hero_content:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

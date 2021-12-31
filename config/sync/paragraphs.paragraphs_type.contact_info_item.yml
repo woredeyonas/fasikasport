@@ -1,0 +1,10 @@
+uuid: 6f934ce2-933d-49f9-a18c-f81ea20d50d5
+langcode: en
+status: true
+dependencies: {  }
+id: contact_info_item
+label: 'Contact Info Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: dc1841ad-8db9-4821-944a-7166d9b9a471
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tailwindcss
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: tailwindcss_branding
+theme: tailwindcss
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

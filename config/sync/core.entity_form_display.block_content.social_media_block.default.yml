@@ -1,0 +1,35 @@
+uuid: d330a010-0a97-4924-a056-ea8b2f591f54
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media_block
+    - field.field.block_content.social_media_block.field_social_media_links
+  module:
+    - paragraphs
+id: block_content.social_media_block.default
+targetEntityType: block_content
+bundle: social_media_block
+mode: default
+content:
+  field_social_media_links:
+    type: entity_reference_paragraphs
+    weight: 26
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

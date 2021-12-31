@@ -1,0 +1,22 @@
+uuid: 9165a361-93f7-47cf-8266-c365c8351ced
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fasika_sport
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: fasika_sport_breadcrumbs
+theme: fasika_sport
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
