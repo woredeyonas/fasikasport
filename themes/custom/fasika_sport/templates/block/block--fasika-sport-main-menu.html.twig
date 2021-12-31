@@ -1,0 +1,52 @@
+<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+  <a class="mr-5 hover:text-gray-900">First Link</a>
+  <a class="mr-5 hover:text-gray-900">Second Link</a>
+  <a class="mr-5 hover:text-gray-900">Third Link</a>
+  <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+</nav>
+
+{#
+/**
+* @file
+* Default theme implementation to display a menu.
+*
+* Available variables:
+* - menu_name: The machine name of the menu.
+* - items: A nested list of menu items. Each menu item contains:
+*   - attributes: HTML attributes for the menu item.
+*   - below: The menu item child items.
+*   - title: The menu link title.
+*   - url: The menu link url, instance of \Drupal\Core\Url
+*   - localized_options: Menu link localized options.
+*
+* @ingroup templates
+*/
+#}
+{% import _self as menus %}
+
+{#
+ We call a macro which calls itself to render the full tree.
+ @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{%
+  set classes = [
+     'md:ml-auto',
+     'flex',
+     'flex-wrap',
+     'items-center',
+     'text-base',
+     'justify-center',
+  ]
+%}
+
+{%
+  set link_classes = [
+      'mr-5',
+      'hover:text-gray-900',
+  ]
+%}
+  <nav {{ attributes.setClass(classes) }}>
+    {% for item in items %}
+      <a href="{{ item.url }}" {{ attributes.setClass(link_classes) }}>{{ item.title }}</a>
+    {% endfor %}
+  </nav>
