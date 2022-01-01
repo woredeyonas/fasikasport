@@ -17,12 +17,15 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/admin_toolbar": "^3.0",
+        "drupal/contact_storage": "^1.1",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/core-vendor-hardening": "^9",
+        "drupal/entity_browser": "^2.6",
         "drupal/paragraphs": "^1.12",
         "drupal/tailwindcss": "^4.0@RC",
+        "drupal/twig_tweak": "^3.1",
         "drush/drush": "^10.6"
     },
     "conflict": {
@@ -86,5 +89,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/twig_xdebug": "^1.2"
     }
 }
