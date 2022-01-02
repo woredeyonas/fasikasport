@@ -1,0 +1,30 @@
+uuid: e098d89f-44be-4a99-af40-7af6bfe70e9b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:form_block:74693381-c0bd-4d47-bdb6-59965c3cecf8'
+  module:
+    - block_content
+    - system
+  theme:
+    - fasika_sport
+id: dropusamessage
+theme: fasika_sport
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:74693381-c0bd-4d47-bdb6-59965c3cecf8'
+settings:
+  id: 'block_content:74693381-c0bd-4d47-bdb6-59965c3cecf8'
+  label: 'Drop us a message!'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact

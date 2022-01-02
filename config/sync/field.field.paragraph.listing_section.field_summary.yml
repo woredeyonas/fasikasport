@@ -1,0 +1,21 @@
+uuid: 1ccb31fa-1796-4029-939d-0d9184ac991f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - paragraphs.paragraphs_type.listing_section
+  module:
+    - text
+id: paragraph.listing_section.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: listing_section
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

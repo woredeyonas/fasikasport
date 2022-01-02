@@ -1,1 +1,10 @@
 <?php
+
+function fasika_sport_preprocess_block(&$variables) {
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    if ($route_match->getParameter('node')) {
+      $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+      $variables['current_page_title'] = $page_title;
+    }
+}

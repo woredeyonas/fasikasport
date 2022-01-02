@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.text_content.field_content
     - field.field.paragraph.text_content.field_link
+    - field.field.paragraph.text_content.field_text_component_type
     - field.field.paragraph.text_content.field_text_content_title
     - paragraphs.paragraphs_type.text_content
   module:
     - link
+    - options
     - text
 id: paragraph.text_content.default
 targetEntityType: paragraph
@@ -24,7 +26,7 @@ content:
     region: content
   field_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -33,6 +35,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_text_component_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_text_content_title:
     type: string

@@ -3,16 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.listing_section.field_design_type
     - field.field.paragraph.listing_section.field_listing_component
     - field.field.paragraph.listing_section.field_listing_section_title
+    - field.field.paragraph.listing_section.field_summary
     - paragraphs.paragraphs_type.listing_section
   module:
     - entity_reference_revisions
+    - options
+    - text
 id: paragraph.listing_section.default
 targetEntityType: paragraph
 bundle: listing_section
 mode: default
 content:
+  field_design_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_listing_component:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -29,5 +40,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden: {  }

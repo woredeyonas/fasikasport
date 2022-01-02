@@ -1,0 +1,21 @@
+uuid: 34eaefe0-9b1d-445a-a13e-e3c7fda425e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_design_type
+    - paragraphs.paragraphs_type.listing_section
+  module:
+    - options
+id: paragraph.listing_section.field_design_type
+field_name: field_design_type
+entity_type: paragraph
+bundle: listing_section
+label: 'Design Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

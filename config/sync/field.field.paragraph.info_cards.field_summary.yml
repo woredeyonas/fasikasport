@@ -1,0 +1,21 @@
+uuid: b1b8434e-13d2-4bfe-b696-ce4fa8797f01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - paragraphs.paragraphs_type.info_cards
+  module:
+    - text
+id: paragraph.info_cards.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: info_cards
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

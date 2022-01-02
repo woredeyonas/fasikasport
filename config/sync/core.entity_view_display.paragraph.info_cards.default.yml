@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.info_cards.field_cards
     - field.field.paragraph.info_cards.field_info_block_title
+    - field.field.paragraph.info_cards.field_summary
     - paragraphs.paragraphs_type.info_cards
   module:
     - entity_reference_revisions
+    - text
 id: paragraph.info_cards.default
 targetEntityType: paragraph
 bundle: info_cards
@@ -29,5 +31,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden: {  }

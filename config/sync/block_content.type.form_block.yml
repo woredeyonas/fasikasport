@@ -1,0 +1,8 @@
+uuid: d9cbc410-b28a-4c1a-a4c6-8409bdd6896a
+langcode: en
+status: true
+dependencies: {  }
+id: form_block
+label: 'Form Block'
+revision: 0
+description: ''

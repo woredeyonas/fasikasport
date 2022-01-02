@@ -1,0 +1,27 @@
+uuid: 67d32329-33e6-420e-b4bc-9fdd4e72c61e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_design_type
+field_name: field_design_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: list_with_section_image
+      label: 'List with image'
+    -
+      value: list_with_icon
+      label: 'List with Icon'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

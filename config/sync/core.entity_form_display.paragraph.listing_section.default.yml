@@ -3,19 +3,28 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.listing_section.field_design_type
     - field.field.paragraph.listing_section.field_listing_component
     - field.field.paragraph.listing_section.field_listing_section_title
+    - field.field.paragraph.listing_section.field_summary
     - paragraphs.paragraphs_type.listing_section
   module:
     - paragraphs
+    - text
 id: paragraph.listing_section.default
 targetEntityType: paragraph
 bundle: listing_section
 mode: default
 content:
+  field_design_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_listing_component:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -31,6 +40,14 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_summary:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
 hidden:
