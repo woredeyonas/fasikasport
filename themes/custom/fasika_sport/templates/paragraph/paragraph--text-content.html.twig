@@ -44,7 +44,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'text-gray-600',
+    'text-black',
     'body-font',
     'bg-black'
   ]
@@ -58,16 +58,10 @@
   {% block paragraph %}
     <section{{ attributes.addClass(classes) }}>
       {% block content %}
-        {#<div class="container px-5 py-12 mx-auto flex flex-wrap">
-          <div class="w-full sm:p-4 px-4 mb-6">
-            <h1 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2">{{ text_title }}</h1>
-            <div class="leading-relaxed text-white"> {{ text_content|striptags }} </div>
-            <button class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">Button</button>
-          </div>#}
           <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto py-24">
             <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
               <h1 class="sm:text-3xl text-2xl text-white font-medium title-font mb-2">{{ text_title|t }}</h1>
-              <div class="leading-relaxed text-white"> {{ text_content|striptags }} </div>
+              <div class="leading-relaxed text-white text-justify"> {{ text_content|striptags }} </div>
             </div>
             <div class="lg:w-2/6 md:w-1/2 p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
               <button class="text-white hover:text-orange-500 bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-white rounded text-lg">
@@ -80,7 +74,7 @@
     </section>
   {% endblock paragraph %}
 {% else %}
-  <section class="text-gray-600 body-font">
+  <section class="text-black body-font">
       {{ text_content|raw }}
     </div>
   </section>

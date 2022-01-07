@@ -44,7 +44,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'text-gray-600',
+    'text-black',
     'body-font',
   ]
 %}
@@ -66,7 +66,7 @@
 {% set list_summary = content.field_summary['#items'].getValue().0.value ?? '' %}
 
 {% block paragraph %}
-  <section class="text-gray-600 body-font">
+  <section class="text-black body-font">
     <div class="container px-5 pt-24 mx-auto flex flex-wrap">
       {% if design_type == 'list_with_section_image'%}
         <div class="container px-5 py-20 mx-auto">
@@ -90,13 +90,13 @@
               {% set list_sub_title = content.field_listing_component[key]['#paragraph'].get('field_hero_sub_title').getValue()[0].value ?? '' %}    
               {% set website_link = content.field_listing_component[key]['#paragraph'].get('field_website_link').getValue()[0] ?? '' %}
               <div class="flex flex-col mb-10 lg:items-start items-center">
-                <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                  </svg>
+                <div class="inline-flex items-center justify-center rounded-full text-indigo-500 mb-5">
+                  <i class="far fa-handshake" style="padding: .5em; background: orange; border-radius: inherit; color: white; font-size: x-large;"></i>
+                  <span class="flex-grow flex flex-col pl-3">
+                    <span class="title-font font-large text-black">{{ listing_title|t }}</span>
+                  </span>
                 </div>
                 <div class="flex-grow">
-                  <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ listing_title|t }}</h2>
                   <h3 class="tracking-widest text-orange-600 text-xs font-medium title-font">{{ list_sub_title|t|raw }}</h3>
                   <p class="leading-relaxed text-base">{{ listing_content|t }}</p>
                   <a class="mt-3 text-orange-500 inline-flex items-center" href="{{ website_link.uri }}" target="_blank"> {{ website_link.title }}
