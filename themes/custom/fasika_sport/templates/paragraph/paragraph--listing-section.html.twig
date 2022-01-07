@@ -123,12 +123,14 @@
             {% set list_sub_title = content.field_listing_component[key]['#paragraph'].get('field_hero_sub_title').getValue()[0].value ?? '' %}
             {% set list_content = content.field_listing_component[key]['#paragraph'].get('field_info_card_description').getValue()[0].value ?? '' %}
             {% set website_link = content.field_listing_component[key]['#paragraph'].get('field_website_link').getValue()[0] ?? '' %}
-
+            {% set image_url = content.field_listing_component[key].uri %}
             {% if key is even or key == 0 %}
               <div class="flex flex-wrap -m-4 my-4">    
                 <div class="xl:w-1/2 md:w-1/2 p-4">
                   <div class="bg-gray-100 p-6 rounded-lg">
-                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content">
+                    {% if image_url is not null%}
+                      <img class="h-20 rounded w-full object-contain object-center mb-6" src="{{ file_url(content.field_listing_component[key].uri) }}" alt="content">
+                    {% endif %}
                     <h3 class="tracking-widest text-orange-600 text-xs font-medium title-font">{{ list_sub_title|t|raw }}</h3>
                     <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ list_title|t|raw }}</h2>
                     <p class="leading-relaxed text-base">{{ list_content|t|raw }}</p>
@@ -142,7 +144,9 @@
             {% else %}
                 <div class="xl:w-1/2 md:w-1/2 p-4">
                   <div class="bg-gray-100 p-6 rounded-lg">
-                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content">
+                    {% if image_url is not null%}
+                      <img class="h-20 rounded w-full object-contain object-center mb-6" src="{{ file_url(content.field_listing_component[key].uri) }}" alt="content">
+                    {% endif %}
                     <h3 class="tracking-widest text-orange-600 text-xs font-medium title-font">{{ list_sub_title|t|raw }}</h3>
                     <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ list_title|t|raw }}</h2>
                     <p class="leading-relaxed text-base">{{ list_content|t|raw }}</p>

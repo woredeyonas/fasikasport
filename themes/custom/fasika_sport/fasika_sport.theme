@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Asset\file_create_url;
+
 function fasika_sport_preprocess_block(&$variables) {
     $request = \Drupal::request();
     $route_match = \Drupal::routeMatch();
@@ -7,4 +9,21 @@ function fasika_sport_preprocess_block(&$variables) {
       $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
       $variables['current_page_title'] = $page_title;
     }
+}
+
+function fasika_sport_preprocess_paragraph(&$variables) {
+  $paragraph_type = $variables['elements']['#paragraph']->getType();
+
+  if ($paragraph_type == 'listing_section') {
+    $items = $variables['elements']['field_listing_component']['#items']->getValue();
+    foreach ($items as $key => $item) {
+      $image = $variables['content']['field_listing_component'][$key]['#paragraph']->get('field_image')->getValue();
+      if (is_array($image) && count($image) > 0) {
+        $target_id = $image[0]['target_id'];
+        $image_file = \Drupal\file\Entity\File::load($target_id);
+        $uri = $image_file->uri->value;
+        $variables['content']['field_listing_component'][$key]['uri'] = $uri;
+      }
+    }
+  }
 }
