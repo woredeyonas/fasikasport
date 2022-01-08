@@ -33,10 +33,9 @@ content:
     weight: 2
     region: content
   field_image:
-    type: image
+    type: image_url
     label: hidden
     settings:
-      image_link: ''
       image_style: ''
     third_party_settings: {  }
     weight: 0
