@@ -1,12 +1,20 @@
 <?php
 
-function fasika_sport_theme_suggestions_form_alter(array &$suggestions, array $variables, $hook) {
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function fasika_sport_core_theme_suggestions_form_alter(array &$suggestions, array $variables, $hook) {
   if (isset($variables['element']['#id'])) {
     $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
   }
 }
 
-function fasika_sport_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+/**
+ * Implements hook_form_alter().
+ */
+function fasika_sport_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id == 'contact_message_feedback_form') {
     $form['name']['#title_display'] = 'invisible';
     $form['name']['#attributes']['class'] = [
@@ -28,6 +36,5 @@ function fasika_sport_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $f
       'text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-black rounded text-lg'
     ];
     unset($form['actions']['preview']);
-    //dump($form);exit;
   }
-}    
+}
